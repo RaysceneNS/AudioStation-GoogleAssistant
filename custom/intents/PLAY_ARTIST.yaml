@@ -1,0 +1,9 @@
+parameters:
+- name: artist
+  type:
+    name: type_artist
+trainingPhrases:
+- play music from ($artist 'artist_name' auto=false)
+- start music by ($artist 'artist_name' auto=false)
+- play music by ($artist 'artist_name' auto=false)
+- play songs by ($artist 'artist_name' auto=false)

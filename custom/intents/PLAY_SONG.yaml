@@ -1,0 +1,8 @@
+parameters:
+- name: song
+  type:
+    name: type_song
+trainingPhrases:
+- play the track ($song 'song_name' auto=false)
+- play the song called ($song 'song_name' auto=false)
+- play the song ($song 'song_name' auto=false)

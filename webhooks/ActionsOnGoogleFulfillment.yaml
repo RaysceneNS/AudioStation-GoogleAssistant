@@ -1,0 +1,8 @@
+handlers:
+- name: media_status
+- name: play_album
+- name: play_artist
+- name: play_song
+- name: play_next
+inlineCloudFunction:
+  executeFunction: ActionsOnGoogleFulfillment

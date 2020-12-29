@@ -1,0 +1,3 @@
+handler:
+  webhookHandler: play_artist
+transitionToScene: Main

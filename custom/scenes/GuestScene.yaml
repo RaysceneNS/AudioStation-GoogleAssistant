@@ -1,0 +1,7 @@
+onEnter:
+  staticPrompt:
+    candidates:
+    - promptResponse:
+        firstSimple:
+          variants:
+          - speech: I can not play for unverified account. Bye

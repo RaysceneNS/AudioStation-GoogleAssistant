@@ -1,0 +1,5 @@
+custom:
+  PLAY_ALBUM: {}
+  PLAY_ARTIST: {}
+  PLAY_SONG: {}
+  actions.intent.MAIN: {}

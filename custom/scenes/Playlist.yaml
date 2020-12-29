@@ -1,0 +1,25 @@
+conditionalEvents:
+- condition: size(session.params.tracks) == 0
+  transitionToScene: Main
+- condition: size(session.params.tracks) > 0
+  handler:
+    webhookHandler: play_next
+intentEvents:
+- handler:
+    webhookHandler: media_status
+  intent: actions.intent.MEDIA_STATUS_STOPPED
+  transitionToScene: Playlist
+- handler:
+    webhookHandler: media_status
+  intent: actions.intent.MEDIA_STATUS_FINISHED
+  transitionToScene: Playlist
+- handler:
+    webhookHandler: media_status
+  intent: actions.intent.MEDIA_STATUS_FAILED
+  transitionToScene: Playlist
+- handler:
+    webhookHandler: media_status
+  intent: actions.intent.MEDIA_STATUS_PAUSED
+  transitionToScene: Playlist
+- intent: actions.intent.CANCEL
+  transitionToScene: Main

@@ -1,0 +1,24 @@
+conditionalEvents:
+- condition: user.verificationStatus == "GUEST"
+  transitionToScene: GuestScene
+- condition: user.verificationStatus == "VERIFIED" && user.accountLinkingStatus ==
+    "NOT_LINKED"
+  transitionToScene: Main_AccountLinking
+- condition: user.accountLinkingStatus == "LINKED"
+  handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: What would you like to hear?
+intentEvents:
+- handler:
+    webhookHandler: play_album
+  intent: PLAY_ALBUM
+- handler:
+    webhookHandler: play_artist
+  intent: PLAY_ARTIST
+- handler:
+    webhookHandler: play_song
+  intent: PLAY_SONG

@@ -1,0 +1,8 @@
+parameters:
+- name: album
+  type:
+    name: type_album
+trainingPhrases:
+- start the album ($album 'album_name' auto=false)
+- play album ($album 'album_name' auto=false)
+- play the album ($album 'album_name' auto=false)
