@@ -18,3 +18,13 @@
 1. Run `gactions login` to login to your account.
 1. Run `gactions push` to push your project.
 1. Run `gactions deploy preview` to deploy the project.
+
+#### Environment Variables
+1. Go the to google [cloud console](https://console.cloud.google.com/).
+1. Select the project that this action is setup within.
+1. Select the cloud function that is deployed from the google actions console.
+1. Edit the clou function 
+1. Within the Variables, Networking and Advanced Settings area select Anvironment Variables.
+1. Enter a new variable named API_HOST and enter the domain name of the server that runs AudioStation i.e. xyz.synology.me 
+
+[Article on how this came about](https://racineennis.ca/2020/12/20/AudioStation-GoogleAssistant-integration)
