@@ -1,18 +1,18 @@
 accountLinking:
-  appClientId: <appClientId>
+  appClientId: <CLIENT_ID>
   authGrantType: AUTH_CODE
-  authorizationUrl: <authorizationUrl>
+  authorizationUrl: https://<SERVER_NAME>:5001/oauth/oauth_login.cgi
   linkingType: OAUTH
   scopes:
   - AudioStation.voiceassistant
-  tokenUrl: <tokenUrl>
+  tokenUrl: https://<SERVER_NAME>:5001/oauth/oauth_token.cgi
   useBasicAuthHeader: true
 defaultLocale: en
 localizedSettings:
   displayName: Audio Station
   pronunciation: Audio Station
   voice: female_3
-projectId: <projectId>
+projectId: <PROJECT_ID>
 surfaceRequirements:
   minimumRequirements:
   - capability: AUDIO_OUTPUT

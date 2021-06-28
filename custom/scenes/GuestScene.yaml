@@ -1,3 +1,5 @@
+intentEvents:
+- intent: actions.intent.
 onEnter:
   staticPrompt:
     candidates:

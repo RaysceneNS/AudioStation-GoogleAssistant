@@ -22,3 +22,4 @@ intentEvents:
 - handler:
     webhookHandler: play_song
   intent: PLAY_SONG
+- intent: actions.intent.
