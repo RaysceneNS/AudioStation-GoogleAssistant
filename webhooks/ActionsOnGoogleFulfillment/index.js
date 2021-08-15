@@ -7,13 +7,14 @@ const https = require('https');
 
 const app = conversation({debug: true});
 const host = process.env.API_HOST;
+const port = process.env.API_PORT || 5001;
 
 const createMediaStream = (track, token) => {
   return new Media({
     mediaObjects: [{
       name: `${track.title}`,
       description: `${track.album} by ${track.artist}`,
-      url: `https://${host}:5001/webapi/entry.cgi/SYNO.AudioStation.VoiceAssistant.Stream?api=SYNO.AudioStation.VoiceAssistant.Stream&method=stream&version=1&track_id=${track.id}&_oat=%22${token}%22`,
+      url: `https://${host}:${port}/webapi/entry.cgi/SYNO.AudioStation.VoiceAssistant.Stream?api=SYNO.AudioStation.VoiceAssistant.Stream&method=stream&version=1&track_id=${track.id}&_oat=%22${token}%22`,
     }],
     mediaType: 'AUDIO',
     optionalMediaControls: ['PAUSED', 'STOPPED'],
@@ -24,7 +25,7 @@ const browseMedia = (requestBody, token) => {
   return new Promise(function(resolve, reject) {
     let urlparams = {
       host: host,
-      port: 5001,
+      port: port,
       path: '/webapi/entry.cgi/SYNO.AudioStation.VoiceAssistant.Browse',
       method: 'POST',
       headers: {
