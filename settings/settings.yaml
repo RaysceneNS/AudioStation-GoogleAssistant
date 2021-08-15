@@ -1,11 +1,11 @@
 accountLinking:
   appClientId: <CLIENT_ID>
   authGrantType: AUTH_CODE
-  authorizationUrl: https://<SERVER_NAME>:5001/oauth/oauth_login.cgi
+  authorizationUrl: https://<SERVER_NAME>:<SERVER_PORT>/oauth/oauth_login.cgi
   linkingType: OAUTH
   scopes:
   - AudioStation.voiceassistant
-  tokenUrl: https://<SERVER_NAME>:5001/oauth/oauth_token.cgi
+  tokenUrl: https://<SERVER_NAME>:<SERVER_PORT>/oauth/oauth_token.cgi
   useBasicAuthHeader: true
 defaultLocale: en
 localizedSettings:
